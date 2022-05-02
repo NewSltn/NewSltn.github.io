@@ -1,0 +1,242 @@
+
+* { padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    user-select: none; }
+
+
+
+
+/*Codigo barra de navegacion*/
+.navegacion-container {  width: 100%;
+                         padding: 10px 20px;
+
+                         display: flex;
+                         flex-wrap: wrap;
+                         flex-direction: row;
+                         justify-content: space-between;
+                         align-items: center;}
+
+.navegacion_menu { transition: transform .2s ease-in-out;
+                   cursor: pointer; }
+
+                   .navegacion_menu:hover { transform: scale(.8); }
+
+.navegacion_tittle-container  { width: max-content;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-right: 10px;
+
+                                font-size: 20px; }
+
+                                .navegacion_tittle-container span { font-stretch: .8em;
+                                                                    font-family: sans-serif;
+                                                                    color: #999; }
+
+
+/*Codigo de modal info*/
+
+.fondo_modal-info { width: 100%;
+                    height: 100vh;
+                    position: fixed;
+                    z-index: 100;
+                    top: 0;
+                    left: 0;
+
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+
+                    background: rgba(0,0,0,0); }
+
+.fondo_modal-info-open { display: flex;
+                         background: rgba(0,0,0,.5); }
+
+.modal-info-container { width: 30%;
+	                      max-width: 400px;
+	                      max-height: 250px;
+                        height: 20%;
+                        min-height: 300px;
+                        background-color: white;
+                        border-radius: 15px;
+                        padding: 20px;
+                        transform: translateY(-100px);
+                        opacity: 0;
+                        border: none;
+
+                        display: flex;
+                        flex-wrap: nowrap;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        
+                        animation-timing-function: ease-in-out; }
+
+
+                        .modal-closed-container { width: 100%;
+                                                  display: flex;
+                                                  justify-content: flex-end;
+                                                  padding-bottom: 20px;
+                                                  margin-bottom: 20px;  }
+
+                                                  .closed-icon { cursor: pointer;
+                                                                 transition: transform .2s ease-in-out; }
+
+                                                                 .closed-icon:hover { transform: rotate(90deg); }
+
+                        .modal-home-container,
+                        .modal-whatsapp-container,
+                        .modal-miembro-container,
+                        .modal-ofertas-container { width: 50%;
+                                                   display: flex;
+                                                   flex-wrap: nowrap;
+                                                   flex-direction: row;
+                                                   justify-content: flex-start;
+                                                   align-items: flex-end;
+                                                   margin-bottom: 10px;
+
+                                                   font-size: 20px;
+                                                   font-family: sans-serif; }
+   
+                                                   .home-tittle,
+                                                   .whatsapp-tittle,
+                                                   .miembro-tittle,
+                                                   .ofertas-tittle { font-size: .8em;
+                                                                     color: #444;
+                                                                     margin-left: 5px;
+                                                                     transition: color .1s ease-in-out;
+                                                                     cursor: pointer;  }
+
+                                                                     .home-tittle:hover { color: #1aa; }
+                                                                     .whatsapp-tittle:hover { color: #1aa; }
+                                                                     .miembro-tittle:hover { color: #1aa; }
+                                                                     .ofertas-tittle:hover { color: #1aa; }
+
+
+@keyframes modal-view { from { opacity: 0;
+                               transform: translateY(-100px); }
+
+                           to { opacity: 1;
+                                transform: translateY(0); } }
+
+@keyframes modal-closed { from { opacity: 1;
+                                 transform: translateY(0); }
+
+                           to { opacity: 0;
+                                transform: translateY(-100); } }
+
+@media screen and (max-width: 1250px) { .modal-info-container { width: 40%;
+                                                                height: 30%; } }
+
+@media screen and (max-width: 950px) { .modal-info-container { width: 50%;  } }
+@media screen and (max-width:  750px) { .modal-info-container { width: 60%; } }
+@media screen and (max-width: 620px) { .modal-info-container { width: 80%;  } }
+
+@media screen and (max-width: 470px) { .modal-home-container,
+                                       .modal-whatsapp-container,
+                                       .modal-miembro-container,
+                                       .modal-ofertas-container  { width: 70%;
+                                                                   padding-left: 20px; } }
+
+
+
+
+/*Codigo seccion 1 - introduccion a galeria*/
+
+.seccion1-introduccion-container { width: 100%;
+                                   margin: 40px 0px;
+
+                                   display: flex;
+                                   justify-content: center;
+                                   align-items: center; }
+
+                                   .seccion1-container { width: 60%;
+                                                         background-color: transparent;
+                                                         padding: 20px;
+                                                         border: none;
+                                                         border-top: 1px solid #ccc;
+                                                         border-bottom: 1px solid #ccc;
+
+                                                         display: flex;
+                                                         flex-wrap: wrap;
+                                                         flex-direction: column;
+                                                         
+                                                         font-size: 20px;
+                                                         font-family: sans-serif;
+                                                         color: #777; }
+
+                                                         .seccion1-container span { font-size: 1em;
+                                                                                    color: #1aa;
+                                                                                    text-align: center;
+                                                                                    margin-bottom: 10px;
+                                                                                    font-weight: 500; }
+
+                                                         .seccion1-container p { font-size: .8em;
+                                                                                 text-align: center;
+                                                                                 margin-bottom: 10px; }
+
+                                                         .seccion1-container ul { font-size: .8em;
+                                                                                  list-style-type: none;
+                                                                                  text-align: center; }
+
+                                                         .seccion1-parrafo2 { border-top: 1px solid #ccc3;
+                                                                              padding: 20px;
+                                                                              margin-top: 20px; }
+
+@media screen and (max-width: 900px) { .seccion1-container { width: 90%; } }
+
+
+
+
+
+/*Codigo seccion2 demostracion*/
+
+.seccion2-demostracion-container { width: 100%;
+                                   display: flex;
+                                   justify-content: center;
+                                   align-items: center;
+
+                                   display: flex;
+                                   flex-wrap: wrap;
+                                   flex-direction: column;
+                                   justify-content: center;
+                                   align-items: center; }
+
+                                   .seccion2-container { width: 60%;
+                                                         border-radius: 20px;
+
+                                                         font-size: 20px; }
+
+                                                         .seccion2-modelo { width: 100%;
+                                                                            border-radius: 10px;
+                                                                            margin-bottom: 20px;
+                                                                            opacity: 0;
+                                                                            transform: scale(.8);
+                                                                            animation-timing-function: ease-in-out; }
+                                   .seccion2-container-end { font-size: 20px;
+                                                             margin-bottom: 60px;
+
+                                                             display: flex;
+                                                             flex-direction: column;
+                                                             flex-wrap: wrap;
+                                                             justify-content: center;
+                                                             align-items: center;
+                                                             padding: 20px; }
+
+                                                         .seccion2-container span { font-size: .9em;
+                                                                                    font-family: sans-serif;
+                                                                                    color: #333;
+                                                                                    margin-bottom: 10px; }
+
+                                                         .seccion2-container p { font-size: .8em;
+                                                                                 color: #555;
+                                                                                 font-family: sans-serif;
+                                                                                 text-align: center; }
+
+@keyframes models_efect { from{ opacity: 0;
+                                transform: scale(.8); }
+                            to{ opacity: 1; 
+                                transform: scale(1); } }
+
+@media screen and (max-width: 900px) { .seccion2-container { width: 90%; } }

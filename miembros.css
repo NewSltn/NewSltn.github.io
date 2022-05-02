@@ -1,0 +1,364 @@
+
+* { padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    user-select: none; }
+
+
+
+
+
+
+/*Codigo de barra de navegacion*/
+
+.barra-container { width: 100%;
+                   padding: 8px 20px;
+
+                   display: flex;
+                   flex-direction: row;
+                   justify-content: space-between;
+                   align-items: center;
+
+                   font-size: 20px; }
+
+                   .barra-open  { transition: transform .2s ease-in-out; }
+                   .barra-open:hover { cursor: pointer;
+                                       transform: scale(.8); }
+
+                   .barra-container span { font-size: .8em;
+                                           font-family: sans-serif;
+                                           color: #999;
+                                           margin-right: 20px; }
+
+
+
+/*Codigo menu desplegable*/
+
+.fondo_negro { width: 100%;
+               height: 100vh;
+               position: fixed;
+               top: 0;
+               left: 0;
+               background-color: rgba(0,0,0,0);
+               z-index: 400;
+
+               display: none;
+               justify-content: center;
+               align-items: center;
+               transition: background-color .4s ease-in-out; }
+
+.fondo_negro-open  { display: flex;
+                     background-color: rgba(0,0,0,.6); }
+
+               .modal-container { width: 30%;
+               	                  height: 300px;
+               	                  min-height: 250px;
+               	                  max-width: 400px;
+               	                  max-height: 400px;
+                                  background-color: white;
+                                  border-radius: 15px;
+                                  padding: 20px;
+                                  opacity: 0;
+                                  transform: translateY(-100px);
+
+                                  display: flex;
+                                  flex-wrap: wrap;
+                                  flex-direction: column;
+                                  justify-content: flex-start;
+                                  align-items: center;
+                                  transition: transform .4s ease-in-out, opacity .4s ease-in-out; }
+
+                .modal-container-open {  opacity: 1;
+                                         transform: translateY(0); }
+
+                                  .modal-opcion-cerrar  { width: 100%;
+                                                          margin-bottom: 30px;
+
+                                                          display: flex;
+                                                          justify-content: flex-end;
+                                                          align-items: center; }
+
+                                                          .modal-cerrar { transition: transform .2s ease-in-out;
+                                                                          cursor: pointer; }
+                                                          .modal-cerrar:hover { transform: rotate(90deg); }
+
+                                  .modal-opciones { width: 50%;
+                                                    display: flex;
+                                                    flex-direction: row;
+                                                    justify-content: flex-start;
+                                                    align-items: flex-end;
+                                                    margin-bottom: 10px;
+                                                    margin-left: 20px;
+
+                                                    font-size: 20px;
+                                                    font-family: sans-serif; }
+
+                                                    .modal-opciones span { margin-left: 5px;
+                                                                           font-size: .8em;
+                                                                           color: #999;
+                                                                           transition: color .2s ease-in-out;
+                                                                           cursor: pointer; }
+
+                                                                           .modal-opciones span:hover { color: #1AA; }
+
+
+@media screen and (max-width: 1200px) { .modal-container { width: 50%; } }
+@media screen and (max-width: 750px) { .modal-container { width: 60%; } }
+@media screen and (max-width: 600px) { .modal-opciones { width: 70%; } }
+@media screen and (max-width: 480px) { .modal-container { height: 250px;
+                                                          width: 80%; } }
+
+
+
+
+
+
+
+/*Codigo seccion 1 de requisitos*/
+.seccion1-targetas-container { width: 100%;
+                               display: flex;
+                               flex-wrap: wrap;
+                               flex-direction: row;
+                               justify-content: center;
+                               align-items: center;
+                               padding: 20px;
+                               margin: 40px 0px;
+                               border-bottom: 1px solid #ccc; }
+
+.seccion1-targetas { flex-basis: 40%;
+                     border: 1px solid #ccc;
+                     border-radius: 15px;
+                     padding: 20px;
+                     margin: 20px;
+                     height: max-content;
+                     font-size: 20px;
+                     font-family: sans-serif;
+                     transition: outline .3s ease-in-out;
+
+                     display: flex;
+                     flex-wrap: wrap;
+                     flex-direction: column;
+                     justify-content: flex-start;
+                     align-items: flex-start; }
+
+                     .seccion1-tittle { display: flex;
+                                        flex-direction: row;
+                                        justify-content: flex-start;
+                                        align-items: flex-end;
+                                        margin-bottom: 10px;
+
+                                        font-size: .9em;
+                                        color: #444;
+                                        font-weight: 700; }
+
+                                        .seccion1-tittle span { margin-left: 5px; }
+
+                     .seccion1-targetas p { font-size: .8em;
+                                            color: #999; }
+
+                                            .seccion1-solicitar { color: #555 !important;
+                                            	                    margin-top: 15px;
+                                                                  font-weight: 700;
+                                                                  text-align: center;
+                                                                  cursor: pointer;
+                                                                  align-self: center;
+                                                                  transition: color .2s ease-in-out;
+                                                                  width: max-content; }
+
+
+@media screen and (max-width: 850px){ .seccion1-targetas { flex-basis: 80%;
+                                                           border: none;
+                                                           border-top: 1px solid #ccc;
+                                                           border-bottom: 1px solid #ccc;
+                                                           border-radius: 0px; }
+
+                                      .seccion1-solicitar { border-radius: 15px;
+                                                            border: 1px solid #ccc;
+                                                            padding: 8px 15px;
+                                                            background: green;
+                                                            color: white !important; } }
+
+
+
+/*Codigo seccion 2 formulario*/
+
+.seccion2-formulario-container { width: 100%;
+
+                                 display: none;
+                                 flex-wrap: wrap;
+                                 flex-direction: column;
+                                 justify-content: center;
+                                 align-items: center;
+
+                                 font-size: 20px;
+                                 font-family: sans-serif;
+                                 margin-top: 20px; }
+
+                                 .seccion2-formulario-container p { font-size: .8em;
+                                                                    color: #777;
+                                                                    margin-bottom: 40px;
+                                                                    opacity: 0;
+                                                                    width: 90%;
+                                                                    text-align: center; }
+
+                                 .seccion2-formulario { width: 50%;
+
+                                                        display: flex;
+                                                        flex-wrap: wrap;
+                                                        flex-direction: column;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        transform: translateX(-130%);
+
+                                                        font-size: 20px;
+                                                        font-family: sans-serif;
+
+                                                        animation-timing-function: ease-in-out; }
+
+                                                        .seccion2-input { width: 50%;
+                                                                          border: none;
+                                                                          border-bottom: 1px solid #ccc;
+                                                                          background-color: transparent;
+                                                                          font-size: .8em;
+                                                                          margin-bottom: 15px;
+                                                                          outline: none;
+                                                                          padding: 8px;
+                                                                          transform-origin: center;
+                                                                          transition: border-bottom .2s ease-in-out, padding-left .2s ease-in-out; }
+
+                                                                          .seccion2-input:focus{ border-bottom: 2px solid #1aa;
+                                                                                                 padding-left: 30px; }
+                                                        textarea { resize: none;
+                                                                   height: 100px; }
+
+                                                        .btn-enviar { width: 20%;
+                                                                      border-radius: 15px;
+                                                                      background-color: green;
+                                                                      color: white;
+                                                                      padding: 8px 15px;
+                                                                      cursor: pointer;
+                                                                      padding: 10px 20px; }
+
+                                                        .seccion2-aviso { border: none;
+                                                                          font-size: .7em; }
+
+@keyframes form_open { from{ opacity: 0;
+                             transform: translateX(-130%); }
+                        to{  opacity: 1;
+                             transform: translateX(0); } }
+
+@keyframes form_tittle { from{ opacity: 0; } 
+                           to{ opacity: 1; } }
+
+
+@media screen and (max-width: 1000px) { .seccion2-formulario { width: 80%; } }
+@media screen and (max-width: 650px) { .seccion2-formulario { width: 90%; }
+                                       .seccion2-input { width: 80%; } }
+
+
+
+
+
+/*Codigo seccion de ventana de resultado de formulario*/
+.fondo_negro-form { width: 100%;
+                    height: 100vh;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 200;
+
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    background-color: rgba(0,0,0,0);
+                    transition: background-color 1s ease-in-out; }
+
+.fondo_negro-form-open { display: flex;
+                         background-color: rgba(0,0,0,.7); }
+
+                    .form-targeta { width: 30%;
+                                    max-width: 400px;
+                                    height: 250px;
+                                    border-radius: 15px;
+                                    background-color: white;
+                                    padding: 20px;
+                                    transform: scale(.8);
+                                    opacity: 0;
+
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    font-size: 20px;
+                                    font-family: sans-serif;
+
+                                    transition: transform .2s ease-in-out, opacity .2s ease-in-out; }
+
+                     .form-targeta-open { opacity: 1;
+                                          transform: scale(1); }
+
+                                    .form-tittle-exito { font-size: .8em;
+                                                         color: #444;
+                                                         margin-top: 20px;
+                                                         width: 100%;
+                                                         text-align: center; }
+
+                                    .form-tittle-error { font-size: .8em;
+                                                         color: tomato;
+                                                         margin-top: 20px;
+                                                         width: 100%;
+                                                         text-align: center; }
+
+@media screen and (max-width: 650px) { .form-targeta { width: 80%; }  }
+
+
+
+
+
+/*Codigo seccion 3 information*/
+
+.seccion3-information-container { width: 100%;
+                                  padding: 20px;
+
+                                  display: flex;
+                                  flex-wrap: wrap;
+                                  flex-direction: column;
+                                  justify-content: center;
+                                  align-items: center; }
+
+                                  .seccion3-video-container { width: 50%;
+                                                              display: flex;
+                                                              justify-content: center;
+                                                              align-items: center; }
+
+                                                             .seccion3-video-container video {  width: 100%; }
+
+                                  .seccion3-content-container { width: 50%;
+                                                                padding: 20px;
+                                                                margin-top: 40px;
+
+                                                                display: flex;
+                                                                flex-wrap: wrap;
+                                                                flex-direction: column;
+                                                                justify-content: center;
+                                                                align-items: center;
+
+                                                                font-size: 20px;
+                                                                font-family: sans-serif; }
+
+                                                                .seccion3-content-container span{ font-size: .9em;
+                                                                                                  color: #177;
+                                                                                                  margin-bottom: 10px; }
+
+                                                                .seccion3-content-container p { font-size: .8em;
+                                                                                                color: #777; }
+
+
+@media screen and (max-width: 850px) { .seccion3-video-container{ width: 80%; }
+                                       .seccion3-content-container { width: 80%; } }
+@media screen and (max-width: 600px) { .seccion3-video-container{ width: 100%;
+                                                                  padding: 0px; }
+
+                                       .seccion3-content-container { width: 90%; } }
