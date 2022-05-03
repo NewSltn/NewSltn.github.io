@@ -224,12 +224,12 @@
                                                              align-items: center;
                                                              padding: 20px; }
 
-                                                         .seccion2-container span { font-size: .9em;
+                                                         .seccion2-container span { font-size: .8em;
                                                                                     font-family: sans-serif;
                                                                                     color: #333;
                                                                                     margin-bottom: 10px; }
 
-                                                         .seccion2-container p { font-size: .8em;
+                                                         .seccion2-container p { font-size: .7em;
                                                                                  color: #555;
                                                                                  font-family: sans-serif;
                                                                                  text-align: center; }
@@ -240,3 +240,51 @@
                                 transform: scale(1); } }
 
 @media screen and (max-width: 900px) { .seccion2-container { width: 90%; } }
+
+
+
+
+/*Codigo seccion 3 - descargar documento excel*/
+
+.seccion3-container { width: 100%;
+                      height: 200px;
+                      background-color: rgba(0,0,0,.6);
+                      display: flex;
+                      flex-wrap: wrap;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      padding: 20px;
+
+                      font-size: 20px;
+                      font-family: sans-serif; }
+
+                      .seccion3-tittle  { font-size: .8em;
+                                          font-weight: 700;
+                                          color: white;
+                                          text-align: center; }
+
+                      .seccion3-download-container { width: 80%;
+                                                     display: flex;
+                                                     flex-direction: row;
+                                                     justify-content: center;
+                                                     align-items: center;
+                                                     margin-top: 10px;
+
+                                                     font-size: 20px;
+                                                     font-family: sans-serif; }
+
+                                                     .seccion3-btn-download { font-size: .8em;
+                                                                              color: #ccc;
+                                                                              cursor: pointer;
+                                                                              text-decoration: none;
+                                                                              margin-right: 5px; }
+
+                                                     .seccion3-icono-download { animation-name: icono-download;
+                                                                                animation-duration: .7s;
+                                                                                animation-timing-function: ease-in-out;
+                                                                                animation-direction: alternate-reverse;
+                                                                                animation-iteration-count: infinite; }
+
+@keyframes icono-download { from{ }
+                              to{ transform: translateY(10px); } }
